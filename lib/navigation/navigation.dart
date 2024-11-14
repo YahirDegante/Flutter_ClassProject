@@ -1,12 +1,16 @@
 import 'package:flutter/material.dart';
+import 'package:learning_2_10c/modules/posts/presentation/posts.dart';
 import 'package:learning_2_10c/navigation/home.dart';
 import 'package:learning_2_10c/navigation/map_sample.dart';
 import 'package:learning_2_10c/navigation/profile.dart';
 import 'package:learning_2_10c/navigation/reservations.dart';
 import 'package:learning_2_10c/navigation/top.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 
 class Navigation extends StatefulWidget {
-  const Navigation({super.key});
+  final bool nextButton;
+
+  const Navigation({super.key, required this.nextButton});
 
   @override
   State<Navigation> createState() => _NavigationState();
@@ -14,6 +18,7 @@ class Navigation extends StatefulWidget {
 
 class _NavigationState extends State<Navigation> {
   int _selectedIndex = 0;
+  late final SharedPreferences prefs;
 
   static const List<Widget> _widgetOptions = <Widget>[
     Home(),
@@ -21,6 +26,7 @@ class _NavigationState extends State<Navigation> {
     Reservations(),
     Profile(),
     MapSample(),
+    Lista(),
   ];
 
   @override
@@ -45,10 +51,14 @@ class _NavigationState extends State<Navigation> {
             icon: Icon(Icons.person_off_outlined),
             label: 'Perfil',
           ),
+          // BottomNavigationBarItem(
+          //   icon: Icon(Icons.map_outlined),
+          //   label: 'Mapa',
+          // ),
           BottomNavigationBarItem(
             icon: Icon(Icons.map_outlined),
-            label: 'Mapa',
-          ),
+            label: 'Lista',
+          )
         ],
         currentIndex: _selectedIndex,
         showSelectedLabels: true,
@@ -61,5 +71,21 @@ class _NavigationState extends State<Navigation> {
 
   void _onItemTapped(int index) {
     setState(() => _selectedIndex = index);
+  }
+
+  @override
+  void initState() {
+    super.initState();
+    _checkTutorial();
+  }
+
+  Future<void> _checkTutorial() async {
+    if (!widget.nextButton) {
+      prefs = await SharedPreferences.getInstance();
+      final bool? tutorial = prefs.getBool('tutorial');
+      if (tutorial == null) {
+        Navigator.pushReplacementNamed(context, '/tutorial');
+      }
+    }
   }
 }

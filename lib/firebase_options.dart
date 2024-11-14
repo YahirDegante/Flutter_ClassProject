@@ -41,46 +41,46 @@ class DefaultFirebaseOptions {
   }
 
   static const FirebaseOptions web = FirebaseOptions(
-    apiKey: 'AIzaSyDgXkQroiaUMhIJ4iMeEBhG_yXcx10vtuw',
-    appId: '1:852083201556:web:67eb3681dbabc3679ff901',
-    messagingSenderId: '852083201556',
-    projectId: 'rest-4ad5e',
-    authDomain: 'rest-4ad5e.firebaseapp.com',
-    storageBucket: 'rest-4ad5e.firebasestorage.app',
+    apiKey: 'AIzaSyBd0OLwWKRDGPXN_eSZmDV_nDLZCZbjLl0',
+    appId: '1:409801412024:web:1d1afb4c1a97f9df49934d',
+    messagingSenderId: '409801412024',
+    projectId: 'restaurante-yds',
+    authDomain: 'restaurante-yds.firebaseapp.com',
+    storageBucket: 'restaurante-yds.firebasestorage.app',
   );
 
   static const FirebaseOptions android = FirebaseOptions(
-    apiKey: 'AIzaSyCT824EbVQ-IdIrQ3e059J4wljfJeAmIos',
-    appId: '1:852083201556:android:5351efc0a05a50739ff901',
-    messagingSenderId: '852083201556',
-    projectId: 'rest-4ad5e',
-    storageBucket: 'rest-4ad5e.firebasestorage.app',
+    apiKey: 'AIzaSyC9VEDHnelCjvjP36YuHL2hNlCBX2K6iiw',
+    appId: '1:409801412024:android:7c8b21261a22575f49934d',
+    messagingSenderId: '409801412024',
+    projectId: 'restaurante-yds',
+    storageBucket: 'restaurante-yds.firebasestorage.app',
   );
 
   static const FirebaseOptions ios = FirebaseOptions(
-    apiKey: 'AIzaSyBxnYNYQBiCE_Ufh5K5rELInjl15MB913A',
-    appId: '1:852083201556:ios:291293a705390f199ff901',
-    messagingSenderId: '852083201556',
-    projectId: 'rest-4ad5e',
-    storageBucket: 'rest-4ad5e.firebasestorage.app',
+    apiKey: 'AIzaSyCk4B2B6eePAFptsCjOMBEqFcllPZ-I-s4',
+    appId: '1:409801412024:ios:2bf0099521e4ac1c49934d',
+    messagingSenderId: '409801412024',
+    projectId: 'restaurante-yds',
+    storageBucket: 'restaurante-yds.firebasestorage.app',
     iosBundleId: 'com.example.learning210c',
   );
 
   static const FirebaseOptions macos = FirebaseOptions(
-    apiKey: 'AIzaSyBxnYNYQBiCE_Ufh5K5rELInjl15MB913A',
-    appId: '1:852083201556:ios:291293a705390f199ff901',
-    messagingSenderId: '852083201556',
-    projectId: 'rest-4ad5e',
-    storageBucket: 'rest-4ad5e.firebasestorage.app',
+    apiKey: 'AIzaSyCk4B2B6eePAFptsCjOMBEqFcllPZ-I-s4',
+    appId: '1:409801412024:ios:2bf0099521e4ac1c49934d',
+    messagingSenderId: '409801412024',
+    projectId: 'restaurante-yds',
+    storageBucket: 'restaurante-yds.firebasestorage.app',
     iosBundleId: 'com.example.learning210c',
   );
 
   static const FirebaseOptions windows = FirebaseOptions(
-    apiKey: 'AIzaSyDgXkQroiaUMhIJ4iMeEBhG_yXcx10vtuw',
-    appId: '1:852083201556:web:ec81f02be17c78659ff901',
-    messagingSenderId: '852083201556',
-    projectId: 'rest-4ad5e',
-    authDomain: 'rest-4ad5e.firebaseapp.com',
-    storageBucket: 'rest-4ad5e.firebasestorage.app',
+    apiKey: 'AIzaSyBd0OLwWKRDGPXN_eSZmDV_nDLZCZbjLl0',
+    appId: '1:409801412024:web:1fe132871c5e23d749934d',
+    messagingSenderId: '409801412024',
+    projectId: 'restaurante-yds',
+    authDomain: 'restaurante-yds.firebaseapp.com',
+    storageBucket: 'restaurante-yds.firebasestorage.app',
   );
 }

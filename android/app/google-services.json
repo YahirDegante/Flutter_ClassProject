@@ -1,13 +1,13 @@
 {
   "project_info": {
-    "project_number": "852083201556",
-    "project_id": "rest-4ad5e",
-    "storage_bucket": "rest-4ad5e.firebasestorage.app"
+    "project_number": "409801412024",
+    "project_id": "restaurante-yds",
+    "storage_bucket": "restaurante-yds.firebasestorage.app"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:852083201556:android:5351efc0a05a50739ff901",
+        "mobilesdk_app_id": "1:409801412024:android:7c8b21261a22575f49934d",
         "android_client_info": {
           "package_name": "com.example.learning_2_10c"
         }
@@ -15,7 +15,7 @@
       "oauth_client": [],
       "api_key": [
         {
-          "current_key": "AIzaSyCT824EbVQ-IdIrQ3e059J4wljfJeAmIos"
+          "current_key": "AIzaSyC9VEDHnelCjvjP36YuHL2hNlCBX2K6iiw"
         }
       ],
       "services": {

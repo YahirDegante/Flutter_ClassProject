@@ -1,8 +1,8 @@
 import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:flutter_rating/flutter_rating.dart';
-import 'package:google_maps_flutter/google_maps_flutter.dart';
 import 'package:learning_2_10c/modules/home/entities/restaurant.dart';
+import 'package:learning_2_10c/widgets/home/restaurant_map.dart';
 
 class RestaurantDetails extends StatefulWidget {
   final Restaurant? restaurant;
@@ -14,8 +14,6 @@ class RestaurantDetails extends StatefulWidget {
 }
 
 class _RestaurantDetailsState extends State<RestaurantDetails> {
-  CameraPosition? _initialPosition;
-
   late PageController _pageController;
   int _currentPage = 0;
   late Timer _timer;
@@ -25,15 +23,6 @@ class _RestaurantDetailsState extends State<RestaurantDetails> {
     super.initState();
     _pageController = PageController();
     _startAutoSlide();
-    setState(() {
-      _initialPosition = CameraPosition(
-        target: LatLng(
-          widget.restaurant!.direction.latitude,
-          widget.restaurant!.direction.longitude,
-        ),
-        zoom: 14.4746,
-      );
-    });
   }
 
   void _startAutoSlide() {
@@ -104,22 +93,12 @@ class _RestaurantDetailsState extends State<RestaurantDetails> {
             const SizedBox(height: 16.0),
             const Divider(),
             const SizedBox(height: 8.0),
-            const Text(
-              'Ubicación',
-              style: TextStyle(
-                fontSize: 24.0,
-                fontWeight: FontWeight.bold,
+            Expanded(
+              child: RestaurantMap(
+                latitude: widget.restaurant!.latitude,
+                longitude: widget.restaurant!.longitude,
               ),
             ),
-            SizedBox(
-              height: 250,
-              child: GoogleMap(
-                mapType: MapType.none,
-                initialCameraPosition: _initialPosition!,
-              ),
-            ),
-            const SizedBox(height: 8.0),
-            const Divider(),
           ],
         ),
       ),
