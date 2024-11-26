@@ -41,7 +41,7 @@ class Profile extends StatelessWidget {
                       ),
                     ),
                     Text(
-                      "Cristopher Soto",
+                      "Yahir Degante",
                       style: TextStyle(fontSize: 14.0),
                     ),
                   ],
